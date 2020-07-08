@@ -2,9 +2,24 @@ openapi: 3.0.0
 info:
   title: swagger_test_api
   version: '1.0'
-  description: ''
+  description: test-api
+  contact:
+    name: kitsystemyou
+    url: contact
+    email: email_address
+  termsOfService: yeah
+  license:
+    name: MIT
+    url: hogehoge
 servers:
   - url: 'http://localhost:3000'
+  - url: 'http://localhost:3000/index.html'
+  - description: ''
+    url: 'http://localhost:3000/login'
+  - url: 'http://localhost:3000/logout'
+    description: ''
+  - url: 'http://localhost:3000/list'
+    description: ''
 paths: {}
 components:
   schemas: {}
@@ -13,4 +28,5 @@ components:
       name: API Key
       type: apiKey
       in: query
-      description: ''
+security:
+  - API Key - 1: []
